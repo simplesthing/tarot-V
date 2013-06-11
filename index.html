@@ -3,12 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tarot-V</title>
+	<link rel="stylesheet" href="css/tarot.css"/>
 <body>
 	<script type="text/x-handlebars" data-template-name="tarot">
-	{{#each controller}}
-		{{name}}
-		<img {{bindAttr src="image"}} >
+	{{#each controller itemController="card"}}
+		<div {{bindAttr class="cardClass" }}>
+			{{name}} {{color}}
+		</div>
 	{{/each}}
+
 	</script>
 	<script src="js/jquery-1.9.1.js"></script>
     <script src="js/handlebars-1.0.0-rc.4.js"></script>
@@ -19,6 +22,7 @@
     <script src="js/models/store.js"></script>
     <script src="js/models/card.js"></script>  
     <script src="js/controllers/tarot_controller.js"></script>  
+    <script src="js/controllers/card_controller.js"></script>  
 </head>
 </body>
 </html>

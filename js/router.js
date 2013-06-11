@@ -5,5 +5,8 @@ Tarot.Router.map(function(){
 Tarot.TarotRoute = Ember.Route.extend({
 	model: function (){
 		return Tarot.Card.find();
+	}, 
+	deck: function(){
+		return "test"
 	}
 })
